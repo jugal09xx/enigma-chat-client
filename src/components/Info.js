@@ -10,7 +10,7 @@ function Info(props) {
     const [name,setName] = useState(null)
     const [id,setId] = useState(null)
 
-    const url = 'http://localhost:9000'
+    const url = 'https://enigma-api.herokuapp.com'
 
     useEffect(() => {
         setActiveUser(props.currentId)

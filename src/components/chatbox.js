@@ -4,7 +4,6 @@ import Chatcontent from "./Chatcontent.js"
 import {MdInsertEmoticon,MdPhoto,MdSend} from 'react-icons/md'
 import axios from 'axios'
 import "./chatbox.css";
-import {toast,ToastContainer} from 'react-toastify'
 
 function Chatbox({ channel, currentId }) {
 
@@ -25,7 +24,7 @@ function Chatbox({ channel, currentId }) {
   }
 
   async function postMessage(){
-    await axios.post('http://localhost:9000/room/1e597cdc3a8c4d86aa7c21f892ab7fd0/message',data,options)
+    await axios.post('https://enigma-api.herokuapp.com/room/1e597cdc3a8c4d86aa7c21f892ab7fd0/message',data,options)
     .then(res => {
       console.log(res.data)
     }).catch(error => {
@@ -38,15 +37,8 @@ function Chatbox({ channel, currentId }) {
     postMessage()
   }
 
-  function typing(){
-    toast.success("People are typing...", {
-      position: toast.POSITION.BOTTOM_CENTER,
-    });
-  }
-
   const handleInput = (e) => {
     setMessage(e.target.value)
-    typing()
   }
 
   function scrollBottom(e){
@@ -61,16 +53,6 @@ function Chatbox({ channel, currentId }) {
     
       <div className='chat-container'>
         <Chatcontent currentId={currentId} channel={channel}/>
-        <ToastContainer
-          position="top-center"
-          autoClose={3500}
-          hideProgressBar={!true}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnHover
-          limit={1}
-        />
         <div className="chat-send">
             <MdInsertEmoticon className='chat-send-icon1'/>
           <form onSubmit={handleSubmit}>

@@ -19,7 +19,7 @@ function Navbar(props) {
 
   const [currentUser,setCurrentUser] = useState('')
 
-  const url = 'http://localhost:9000'
+  const url = 'https://enigma-api.herokuapp.com'
 
   useEffect(() => {
     const getCurrentUser = () => {

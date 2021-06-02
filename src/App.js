@@ -23,7 +23,7 @@ function App() {
   const [loginId, setLoginId] = useState("");
   const [loginStatus, setLoginStatus] = useState(false);
 
-  const url = "http://localhost:9000";
+  const url = "https://enigma-api.herokuapp.com";
 
   const loginErr = () => {
     toast.error("Incorrect ID!", {

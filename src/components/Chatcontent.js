@@ -10,7 +10,7 @@ function Chatcontent({ currentId, channel }) {
 
     useEffect(() => {
         const getConversation = () => {
-            axios.get('http://localhost:9000/room/1e597cdc3a8c4d86aa7c21f892ab7fd0', headers)
+            axios.get('https://enigma-api.herokuapp.com/room/1e597cdc3a8c4d86aa7c21f892ab7fd0', headers)
             .then(res => {
                 setId(currentId)
                 const convo = res.data.conversation
