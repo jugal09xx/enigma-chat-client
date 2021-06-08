@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./SidebarChat.css";
 import axios from "axios";
-//import Avatar from '../assets/jugal.png';
+import Avatar from '../assets/jugal.jpg'
 //import axios from 'axios'
 
 function SidebarChat(props) {
@@ -62,9 +62,9 @@ function SidebarChat(props) {
   const currentUser = props.currentUser;
   return (
     <div className="Chat">
-      {/* <div className='Chat-img'>
+      <div className='Chat-img'>
                 <img src={Avatar} alt='avatar'></img>
-            </div> */}
+            </div> 
       <div className="Chat-info" onClick={() => console.log(conversation[0].firstName)}>
         <h2>SEPM Project</h2>
         <p className='subtext'>
