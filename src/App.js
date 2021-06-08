@@ -109,7 +109,7 @@ function App() {
                   Login 🚀
                 </button>
                 <p>
-                  Welcome to <a href="/register">Enigma!</a>
+                  Welcome to Enigma!
                 </p>
               </form>
             </div>
